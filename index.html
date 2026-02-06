@@ -382,22 +382,27 @@
       noMessage.textContent = funnyMessages[messageIndex % funnyMessages.length];
       messageIndex++;
 
-      // Make Yes button grow bigger (slower growth = longer game!)
-      yesScale += 0.08;
+      // Make Yes button grow MUCH bigger (more dramatic!)
+      yesScale += 0.18;
       yesBtn.style.transform = `scale(${yesScale})`;
       
       // Also make the Yes button glow more as it gets bigger
       const glowIntensity = Math.min((yesScale - 1) * 50, 60);
       yesBtn.style.boxShadow = `0 15px 35px rgba(255,77,109,${0.55 + (yesScale-1)*0.1}), 0 0 ${glowIntensity}px rgba(255,77,109,0.6)`;
 
-      // Move No button to random position on screen (stays visible!)
+      // Move No button to random position on screen (stays visible within safe bounds!)
       noBtn.classList.add('escaped');
-      const padding = 80;
-      const maxX = window.innerWidth - noBtn.offsetWidth - padding;
-      const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+      const padding = 100;
+      const btnWidth = noBtn.offsetWidth || 100;
+      const btnHeight = noBtn.offsetHeight || 50;
+      const maxX = window.innerWidth - btnWidth - padding;
+      const maxY = window.innerHeight - btnHeight - padding;
       
-      noBtn.style.left = (Math.random() * maxX + padding/2) + "px";
-      noBtn.style.top = (Math.random() * maxY + padding/2) + "px";
+      const newX = Math.max(padding, Math.min(Math.random() * maxX, maxX));
+      const newY = Math.max(padding, Math.min(Math.random() * maxY, maxY));
+      
+      noBtn.style.left = newX + "px";
+      noBtn.style.top = newY + "px";
     });
 
     // Keep No button moving around the screen continuously
@@ -405,11 +410,17 @@
     noBtn.addEventListener("mouseenter", () => {
       if (!noButtonInterval) {
         noButtonInterval = setInterval(() => {
-          const padding = 80;
-          const maxX = window.innerWidth - noBtn.offsetWidth - padding;
-          const maxY = window.innerHeight - noBtn.offsetHeight - padding;
-          noBtn.style.left = (Math.random() * maxX + padding/2) + "px";
-          noBtn.style.top = (Math.random() * maxY + padding/2) + "px";
+          const padding = 100;
+          const btnWidth = noBtn.offsetWidth || 100;
+          const btnHeight = noBtn.offsetHeight || 50;
+          const maxX = window.innerWidth - btnWidth - padding;
+          const maxY = window.innerHeight - btnHeight - padding;
+          
+          const newX = Math.max(padding, Math.min(Math.random() * maxX, maxX));
+          const newY = Math.max(padding, Math.min(Math.random() * maxY, maxY));
+          
+          noBtn.style.left = newX + "px";
+          noBtn.style.top = newY + "px";
         }, 1500);
       }
     }, { once: true });
