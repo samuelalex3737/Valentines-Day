@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Be My Valentine 💘</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
 
   <!-- Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -31,9 +34,17 @@
     }
 
     @keyframes bgMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     /* Sparkle cursor canvas */
@@ -44,7 +55,7 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 9999;
+      z-index: 10002;
     }
 
     /* Card */
@@ -56,15 +67,22 @@
       border-radius: 28px;
       text-align: center;
       box-shadow:
-        0 30px 80px rgba(0,0,0,0.25),
-        inset 0 0 0 1px rgba(255,255,255,0.4);
+        0 30px 80px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.4);
       position: relative;
       animation: cardIn 1.1s ease;
     }
 
     @keyframes cardIn {
-      from { opacity: 0; transform: translateY(30px) scale(0.95); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     /* Glow ring */
@@ -93,7 +111,7 @@
       object-fit: cover;
       border-radius: 16px;
       border: 3px solid #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
     }
 
@@ -112,10 +130,23 @@
     }
 
     @keyframes heartbeat {
-      0%,100% { transform: scale(1); }
-      25% { transform: scale(1.08); }
-      50% { transform: scale(1); }
-      75% { transform: scale(1.12); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      25% {
+        transform: scale(1.08);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      75% {
+        transform: scale(1.12);
+      }
     }
 
     /* Countdown */
@@ -126,7 +157,7 @@
       border-radius: 16px;
       margin-bottom: 20px;
       font-size: 14px;
-      box-shadow: 0 8px 20px rgba(255,77,109,0.3);
+      box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
     }
 
     .countdown-time {
@@ -168,7 +199,7 @@
       font-weight: 500;
       cursor: pointer;
       transition: all 0.25s ease;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
 
     button:active {
@@ -179,16 +210,16 @@
       left: 12%;
       background: linear-gradient(135deg, #ff4d6d, #ff758f);
       color: #fff;
-      box-shadow: 0 15px 35px rgba(255,77,109,0.55);
+      box-shadow: 0 15px 35px rgba(255, 77, 109, 0.55);
     }
 
     #yes:hover {
-      box-shadow: 0 20px 40px rgba(255,77,109,0.7);
+      box-shadow: 0 20px 40px rgba(255, 77, 109, 0.7);
     }
 
     #no {
       left: 55%;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       color: #777;
       z-index: 1000;
     }
@@ -217,7 +248,7 @@
       border-radius: 50%;
       font-size: 24px;
       cursor: pointer;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
       z-index: 100;
     }
@@ -240,6 +271,7 @@
         transform: translateY(0) scale(1);
         opacity: 1;
       }
+
       to {
         transform: translateY(-120vh) scale(1.8);
         opacity: 0;
@@ -248,17 +280,40 @@
 
     /* Responsive */
     @media (max-width: 480px) {
-      h2 { font-size: 23px; }
-      .emoji { font-size: 58px; }
-      button { padding: 12px 28px; font-size: 15px; }
-      #yes { left: 8%; }
-      #no { left: 55%; }
+      h2 {
+        font-size: 23px;
+      }
+
+      .emoji {
+        font-size: 58px;
+      }
+
+      button {
+        padding: 12px 28px;
+        font-size: 15px;
+      }
+
+      #yes {
+        left: 8%;
+      }
+
+      #no {
+        left: 55%;
+      }
+
       .photo-gallery img {
         width: 90px;
         height: 90px;
       }
-      .celebration-content h1 { font-size: 28px; }
-      .collage img { width: 100px; height: 100px; }
+
+      .celebration-content h1 {
+        font-size: 28px;
+      }
+
+      .collage img {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     /* Celebration Screen */
@@ -274,10 +329,11 @@
       z-index: 10000;
       display: none;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
       opacity: 0;
       transition: opacity 0.5s ease;
+      overflow-y: auto;
     }
 
     .celebration-screen.show {
@@ -287,15 +343,17 @@
 
     .celebration-content {
       text-align: center;
-      padding: 30px;
-      max-width: 90%;
+      padding: 20px;
+      max-width: 95%;
+      margin: 0 auto;
+      width: 100%;
     }
 
     .celebration-content h1 {
       font-family: "Playfair Display", serif;
       font-size: 42px;
       color: #fff;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
       margin-bottom: 10px;
       animation: pulse 1.5s ease infinite;
     }
@@ -304,12 +362,19 @@
       font-size: 20px;
       color: #fff;
       margin-bottom: 30px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
     }
 
     @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
     }
 
     .collage {
@@ -328,30 +393,89 @@
       object-fit: cover;
       border-radius: 16px;
       border: 3px solid #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       animation: floatIn 0.8s ease backwards;
     }
 
-    .collage img:nth-child(1) { animation-delay: 0.1s; transform: rotate(-3deg); }
-    .collage img:nth-child(2) { animation-delay: 0.15s; transform: rotate(3deg); }
-    .collage img:nth-child(3) { animation-delay: 0.2s; transform: rotate(-2deg); }
-    .collage img:nth-child(4) { animation-delay: 0.25s; transform: rotate(2deg); }
-    .collage img:nth-child(5) { animation-delay: 0.3s; transform: rotate(-3deg); }
-    .collage img:nth-child(6) { animation-delay: 0.35s; transform: rotate(2deg); }
-    .collage img:nth-child(7) { animation-delay: 0.4s; transform: rotate(-2deg); }
-    .collage img:nth-child(8) { animation-delay: 0.45s; transform: rotate(3deg); }
-    .collage img:nth-child(9) { animation-delay: 0.5s; transform: rotate(-1deg); }
-    .collage img:nth-child(10) { animation-delay: 0.55s; transform: rotate(2deg); }
-    .collage img:nth-child(11) { animation-delay: 0.6s; transform: rotate(-3deg); }
-    .collage img:nth-child(12) { animation-delay: 0.65s; transform: rotate(1deg); }
-    .collage img:nth-child(13) { animation-delay: 0.7s; transform: rotate(-2deg); }
-    .collage img:nth-child(14) { animation-delay: 0.75s; transform: rotate(3deg); }
-    .collage img:nth-child(15) { animation-delay: 0.8s; transform: rotate(-1deg); }
+    .collage img:nth-child(1) {
+      animation-delay: 0.1s;
+      transform: rotate(-3deg);
+    }
+
+    .collage img:nth-child(2) {
+      animation-delay: 0.15s;
+      transform: rotate(3deg);
+    }
+
+    .collage img:nth-child(3) {
+      animation-delay: 0.2s;
+      transform: rotate(-2deg);
+    }
+
+    .collage img:nth-child(4) {
+      animation-delay: 0.25s;
+      transform: rotate(2deg);
+    }
+
+    .collage img:nth-child(5) {
+      animation-delay: 0.3s;
+      transform: rotate(-3deg);
+    }
+
+    .collage img:nth-child(6) {
+      animation-delay: 0.35s;
+      transform: rotate(2deg);
+    }
+
+    .collage img:nth-child(7) {
+      animation-delay: 0.4s;
+      transform: rotate(-2deg);
+    }
+
+    .collage img:nth-child(8) {
+      animation-delay: 0.45s;
+      transform: rotate(3deg);
+    }
+
+    .collage img:nth-child(9) {
+      animation-delay: 0.5s;
+      transform: rotate(-1deg);
+    }
+
+    .collage img:nth-child(10) {
+      animation-delay: 0.55s;
+      transform: rotate(2deg);
+    }
+
+    .collage img:nth-child(11) {
+      animation-delay: 0.6s;
+      transform: rotate(-3deg);
+    }
+
+    .collage img:nth-child(12) {
+      animation-delay: 0.65s;
+      transform: rotate(1deg);
+    }
+
+    .collage img:nth-child(13) {
+      animation-delay: 0.7s;
+      transform: rotate(-2deg);
+    }
+
+    .collage img:nth-child(14) {
+      animation-delay: 0.75s;
+      transform: rotate(3deg);
+    }
+
+    .collage img:nth-child(15) {
+      animation-delay: 0.8s;
+      transform: rotate(-1deg);
+    }
 
     .collage img:hover {
       transform: scale(1.1) rotate(0deg) !important;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
       z-index: 10;
     }
 
@@ -360,26 +484,35 @@
         opacity: 0;
         transform: translateY(50px) scale(0.8);
       }
+
       to {
         opacity: 1;
       }
     }
 
     .celebration-message {
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       padding: 20px 40px;
       border-radius: 50px;
       font-family: "Playfair Display", serif;
       font-size: 24px;
       color: #ff4d6d;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       animation: bounceIn 0.6s ease 1s backwards;
     }
 
     @keyframes bounceIn {
-      0% { transform: scale(0); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
 
     /* Valentine's Day Celebration Mode */
@@ -401,7 +534,7 @@
       font-family: "Playfair Display", serif;
       font-size: 24px;
       z-index: 10001;
-      box-shadow: 0 5px 30px rgba(255,20,147,0.5);
+      box-shadow: 0 5px 30px rgba(255, 20, 147, 0.5);
       animation: bannerPulse 2s ease infinite;
       display: none;
     }
@@ -411,8 +544,15 @@
     }
 
     @keyframes bannerPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.02);
+      }
     }
 
     /* Fireworks Canvas */
@@ -424,6 +564,131 @@
       height: 100%;
       pointer-events: none;
       z-index: 9998;
+    }
+
+    /* ===== Valentine Week Icons ===== */
+    .celebration-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin: 15px auto 20px;
+      max-width: 700px;
+      padding: 0 10px;
+    }
+
+    .day-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .day-icon:hover {
+      transform: scale(1.12);
+    }
+
+    .day-icon:active {
+      transform: scale(0.95);
+    }
+
+    .day-icon .icon-circle {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-icon .icon-circle::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff4d6d, #fbc2eb, #ff9a9e);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .day-icon:hover .icon-circle::before,
+    .day-icon.active .icon-circle::before {
+      opacity: 1;
+    }
+
+    .day-icon.active .icon-circle {
+      box-shadow:
+        0 8px 30px rgba(255, 77, 109, 0.5),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+      animation: iconPulse 1s ease infinite;
+    }
+
+    @keyframes iconPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    .day-icon .icon-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+      white-space: nowrap;
+    }
+
+    /* Animation canvas overlay */
+    #day-anim-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10001;
+    }
+
+    @media (max-width: 480px) {
+      .day-icon .icon-circle {
+        width: 54px;
+        height: 54px;
+        font-size: 25px;
+      }
+
+      .day-icon .icon-label {
+        font-size: 9px;
+      }
+
+      .celebration-icons {
+        gap: 10px;
+      }
+
+      .celebration-content h1 {
+        font-size: 28px;
+      }
+
+      .collage img {
+        width: 100px;
+        height: 100px;
+      }
     }
   </style>
 </head>
@@ -451,8 +716,9 @@
   <div class="card">
     <!-- Photo gallery -->
     <div class="photo-gallery">
-      <img src="Pictures/WhatsApp Image 2026-02-06 at 19.33.55.jpeg" alt="Us 💕">
-      <img src="Pictures/WhatsApp Image 2026-02-06 at 19.33.55 (1).jpeg" alt="Us 💕">
+      <img src="picture1.jpeg" alt="Us 💕">
+      <img src="picture2.jpeg" alt="Us 💕">
+      <img src="picture3.jpeg" alt="Us 💕">
     </div>
 
     <div class="emoji">😚❤️</div>
@@ -481,29 +747,68 @@
   <audio id="yesSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
 
   <!-- Celebration Screen with Photo Collage -->
+  <!-- Day Animation Canvas -->
+  <canvas id="day-anim-canvas"></canvas>
+
   <div class="celebration-screen" id="celebrationScreen">
     <div class="celebration-content">
       <h1>Shawtys got a melodyyyy 😜💕</h1>
-      <p>I knew you'd say yes! 🥰</p>
-      
+
+
+      <!-- Valentine's Week Icons -->
+      <div class="celebration-icons">
+        <div class="day-icon" data-day="rose" onclick="playDayAnimation('rose')">
+          <div class="icon-circle">🌹</div>
+          <span class="icon-label">Rose Day</span>
+        </div>
+        <div class="day-icon" data-day="propose" onclick="playDayAnimation('propose')">
+          <div class="icon-circle">💍</div>
+          <span class="icon-label">Propose Day</span>
+        </div>
+        <div class="day-icon" data-day="chocolate" onclick="playDayAnimation('chocolate')">
+          <div class="icon-circle">🍫</div>
+          <span class="icon-label">Chocolate Day</span>
+        </div>
+        <div class="day-icon" data-day="teddy" onclick="playDayAnimation('teddy')">
+          <div class="icon-circle">🧸</div>
+          <span class="icon-label">Teddy Day</span>
+        </div>
+        <div class="day-icon" data-day="promise" onclick="playDayAnimation('promise')">
+          <div class="icon-circle">🤞</div>
+          <span class="icon-label">Promise Day</span>
+        </div>
+        <div class="day-icon" data-day="hug" onclick="playDayAnimation('hug')">
+          <div class="icon-circle">🤗</div>
+          <span class="icon-label">Hug Day</span>
+        </div>
+        <div class="day-icon" data-day="kiss" onclick="playDayAnimation('kiss')">
+          <div class="icon-circle">💋</div>
+          <span class="icon-label">Kiss Day</span>
+        </div>
+        <div class="day-icon" data-day="valentine" onclick="playDayAnimation('valentine')">
+          <div class="icon-circle">💕</div>
+          <span class="icon-label">Valentine's Day</span>
+        </div>
+      </div>
+
       <div class="collage">
         <img src="Pictures/WhatsApp Image 2026-02-06 at 19.33.55.jpeg" alt="Us 💕">
-        <img src="Pictures/WhatsApp Image 2026-02-06 at 19.33.55 (1).jpeg" alt="Us 💕">
-        <img src="Pictures/WhatsApp Image 2026-02-08 at 11.04.32.jpeg" alt="Us 💕">
+        <img src="Pictures/WhatsApp Image 2026-02-12 at 13.51.32.jpeg" alt="Us 💕">
+        <img src="Pictures/WhatsApp Image 2026-02-12 at 13.51.42 (1).jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.04.37.jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.04.37 (1).jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.04.38.jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.04.38 (1).jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.04.39.jpeg" alt="Us 💕">
-        <img src="Pictures/WhatsApp Image 2026-02-08 at 11.04.40.jpeg" alt="Us 💕">
+        <img src="Pictures/WhatsApp Image 2026-02-12 at 13.51.38.jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.10.03.jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.10.09.jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.10.09 (1).jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.10.10.jpeg" alt="Us 💕">
         <img src="Pictures/WhatsApp Image 2026-02-08 at 11.10.10 (1).jpeg" alt="Us 💕">
-        <img src="Pictures/WhatsApp Image 2026-02-08 at 11.10.11.jpeg" alt="Us 💕">
+        <img src="Pictures\wsg.jpeg" alt="Us 💕">
       </div>
-      
+
       <div class="celebration-message">Happy Valentine's Day, Bebee! ❤️</div>
     </div>
   </div>
@@ -558,7 +863,7 @@
     // Music control - starts playing automatically
     let musicPlaying = true;
     bgMusic.volume = 0.7;
-    
+
     // Try to autoplay on page load
     window.addEventListener('load', () => {
       bgMusic.play().then(() => {
@@ -577,7 +882,7 @@
         }, { once: true });
       });
     });
-    
+
     // Toggle music on/off
     musicBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -603,25 +908,25 @@
       // Make Yes button grow MUCH bigger (super dramatic!)
       yesScale += 0.30;
       yesBtn.style.transform = `scale(${yesScale})`;
-      
+
       // Also make the Yes button glow more as it gets bigger
       const glowIntensity = Math.min((yesScale - 1) * 50, 60);
-      yesBtn.style.boxShadow = `0 15px 35px rgba(255,77,109,${0.55 + (yesScale-1)*0.1}), 0 0 ${glowIntensity}px rgba(255,77,109,0.6)`;
+      yesBtn.style.boxShadow = `0 15px 35px rgba(255,77,109,${0.55 + (yesScale - 1) * 0.1}), 0 0 ${glowIntensity}px rgba(255,77,109,0.6)`;
 
       // Move No button to random position - keeping it in center area of screen
       noBtn.classList.add('escaped');
       const padding = 200;
       const btnWidth = noBtn.offsetWidth || 100;
       const btnHeight = noBtn.offsetHeight || 50;
-      
+
       const minX = padding;
       const maxX = window.innerWidth - btnWidth - padding;
       const minY = padding;
       const maxY = window.innerHeight - btnHeight - padding;
-      
+
       const newX = minX + Math.random() * (maxX - minX);
       const newY = minY + Math.random() * (maxY - minY);
-      
+
       noBtn.style.left = newX + "px";
       noBtn.style.top = newY + "px";
     });
@@ -634,15 +939,15 @@
           const padding = 200;
           const btnWidth = noBtn.offsetWidth || 100;
           const btnHeight = noBtn.offsetHeight || 50;
-          
+
           const minX = padding;
           const maxX = window.innerWidth - btnWidth - padding;
           const minY = padding;
           const maxY = window.innerHeight - btnHeight - padding;
-          
+
           const newX = minX + Math.random() * (maxX - minX);
           const newY = minY + Math.random() * (maxY - minY);
-          
+
           noBtn.style.left = newX + "px";
           noBtn.style.top = newY + "px";
         }, 1500);
@@ -681,7 +986,7 @@
       setTimeout(() => {
         const celebrationScreen = document.getElementById("celebrationScreen");
         celebrationScreen.classList.add("show");
-        
+
         // Keep confetti going on celebration screen
         setInterval(() => {
           confetti({
@@ -695,27 +1000,27 @@
 
     // Countdown timer to Valentine's Day
     let valentinesCelebrationStarted = false;
-    
+
     function startValentinesCelebration() {
       if (valentinesCelebrationStarted) return;
       valentinesCelebrationStarted = true;
-      
+
       // Add festive class to body
       document.body.classList.add('valentines-day');
-      
+
       // Show banner
       document.getElementById('valentinesBanner').classList.add('show');
-      
+
       // Big confetti burst!
       confetti({
         particleCount: 300,
         spread: 180,
         origin: { y: 0.5 }
       });
-      
+
       // Start fireworks
       startFireworks();
-      
+
       // Continuous confetti
       setInterval(() => {
         confetti({
@@ -725,7 +1030,7 @@
         });
       }, 1500);
     }
-    
+
     function updateCountdown() {
       const valentines = new Date("February 14, 2026 00:00:00").getTime();
       const now = new Date().getTime();
@@ -742,7 +1047,7 @@
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-      document.getElementById("countdown").textContent = 
+      document.getElementById("countdown").textContent =
         `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
@@ -754,16 +1059,16 @@
     const fwCtx = fireworksCanvas.getContext('2d');
     fireworksCanvas.width = window.innerWidth;
     fireworksCanvas.height = window.innerHeight;
-    
+
     window.addEventListener('resize', () => {
       fireworksCanvas.width = window.innerWidth;
       fireworksCanvas.height = window.innerHeight;
     });
-    
+
     const fireworks = [];
     const particles = [];
     let fireworksActive = false;
-    
+
     class Firework {
       constructor() {
         this.x = Math.random() * fireworksCanvas.width;
@@ -773,7 +1078,7 @@
         this.alive = true;
         this.color = `hsl(${Math.random() * 60 + 330}, 100%, 60%)`;
       }
-      
+
       update() {
         this.y -= this.speed;
         if (this.y <= this.targetY) {
@@ -781,7 +1086,7 @@
           this.alive = false;
         }
       }
-      
+
       explode() {
         const particleCount = 80 + Math.floor(Math.random() * 40);
         for (let i = 0; i < particleCount; i++) {
@@ -798,7 +1103,7 @@
           });
         }
       }
-      
+
       draw() {
         fwCtx.beginPath();
         fwCtx.arc(this.x, this.y, 3, 0, Math.PI * 2);
@@ -806,11 +1111,11 @@
         fwCtx.fill();
       }
     }
-    
+
     function startFireworks() {
       fireworksActive = true;
       animateFireworks();
-      
+
       // Launch fireworks periodically
       setInterval(() => {
         if (fireworksActive && Math.random() > 0.3) {
@@ -818,13 +1123,13 @@
         }
       }, 500);
     }
-    
+
     function animateFireworks() {
       if (!fireworksActive) return;
-      
+
       fwCtx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       fwCtx.fillRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
-      
+
       // Update and draw fireworks
       for (let i = fireworks.length - 1; i >= 0; i--) {
         fireworks[i].update();
@@ -834,7 +1139,7 @@
           fireworks.splice(i, 1);
         }
       }
-      
+
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i];
@@ -842,12 +1147,12 @@
         p.y += p.vy;
         p.vy += 0.05; // gravity
         p.life -= 0.015;
-        
+
         if (p.life <= 0) {
           particles.splice(i, 1);
           continue;
         }
-        
+
         fwCtx.beginPath();
         fwCtx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
         fwCtx.fillStyle = p.color;
@@ -855,7 +1160,7 @@
         fwCtx.fill();
         fwCtx.globalAlpha = 1;
       }
-      
+
       requestAnimationFrame(animateFireworks);
     }
 
@@ -905,7 +1210,7 @@
 
     function animateSparkles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       for (let i = sparkles.length - 1; i >= 0; i--) {
         const s = sparkles[i];
         s.x += s.speedX;
@@ -922,32 +1227,244 @@
         ctx.globalAlpha = s.life;
         ctx.fillStyle = s.color;
         ctx.beginPath();
-        
+
         // Draw a star shape
         const spikes = 4;
         const outerRadius = s.size;
         const innerRadius = s.size / 2;
-        
+
         for (let j = 0; j < spikes * 2; j++) {
           const radius = j % 2 === 0 ? outerRadius : innerRadius;
           const angle = (j * Math.PI) / spikes - Math.PI / 2;
           const x = s.x + Math.cos(angle) * radius;
           const y = s.y + Math.sin(angle) * radius;
-          
+
           if (j === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         }
-        
+
         ctx.closePath();
         ctx.fill();
         ctx.restore();
       }
-      
+
       requestAnimationFrame(animateSparkles);
     }
 
     animateSparkles();
+
+    // ===== Valentine's Week Day Animations (Optimized) =====
+    const dayAnimCanvas = document.getElementById('day-anim-canvas');
+    const dayCtx = dayAnimCanvas.getContext('2d');
+    dayAnimCanvas.width = window.innerWidth;
+    dayAnimCanvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      dayAnimCanvas.width = window.innerWidth;
+      dayAnimCanvas.height = window.innerHeight;
+    });
+
+    // === PERFORMANCE: Pre-render all emojis to offscreen canvases ===
+    const emojiCache = {};
+    const EMOJI_SIZE = 36;
+
+    function getEmojiCanvas(emoji) {
+      if (emojiCache[emoji]) return emojiCache[emoji];
+      const offscreen = document.createElement('canvas');
+      offscreen.width = EMOJI_SIZE + 8;
+      offscreen.height = EMOJI_SIZE + 8;
+      const oCtx = offscreen.getContext('2d');
+      oCtx.font = `${EMOJI_SIZE}px serif`;
+      oCtx.textAlign = 'center';
+      oCtx.textBaseline = 'middle';
+      oCtx.fillText(emoji, (EMOJI_SIZE + 8) / 2, (EMOJI_SIZE + 8) / 2);
+      emojiCache[emoji] = offscreen;
+      return offscreen;
+    }
+
+    // Pre-cache all emojis on load
+    const allEmojis = [
+      '🌹', '🌷', '💐', '🌸',
+      '💍', '💎', '✨', '💫',
+      '🍫', '🍬', '🍭', '🧁', '🍰',
+      '🧸', '🐻', '💛', '🎀',
+      '🤞', '💖', '🌟', '💗',
+      '🤗', '💕', '🫂', '💞', '🥰',
+      '💋', '😘', '💄', '❤️', '😽'
+    ];
+    allEmojis.forEach(e => getEmojiCanvas(e));
+
+    // Emoji lists per type
+    const dayEmojis = {
+      rose: ['🌹', '🌷', '💐', '🌸'],
+      propose: ['💍', '💎', '✨', '💫'],
+      chocolate: ['🍫', '🍬', '🍭', '🧁', '🍰'],
+      teddy: ['🧸', '🐻', '💛', '🎀'],
+      promise: ['🤞', '💖', '🌟', '✨', '💗'],
+      hug: ['🤗', '💕', '🫂', '💞', '🥰'],
+      kiss: ['💋', '😘', '💄', '❤️', '😽']
+    };
+
+    let dayAnimId = null;
+    let dayAnimTimeout = null;
+    let activeDayParticles = [];
+    let particleCount = 0;
+    let activeDay = null;
+    const MAX_PARTICLES = 80;
+
+    function stopDayAnimation() {
+      if (dayAnimId) cancelAnimationFrame(dayAnimId);
+      if (dayAnimTimeout) clearTimeout(dayAnimTimeout);
+      dayAnimId = null;
+      dayAnimTimeout = null;
+      activeDayParticles.length = 0;
+      particleCount = 0;
+      activeDay = null;
+      dayCtx.clearRect(0, 0, dayAnimCanvas.width, dayAnimCanvas.height);
+      document.querySelectorAll('.day-icon').forEach(el => el.classList.remove('active'));
+    }
+
+    function playDayAnimation(day) {
+      if (activeDay === day) { stopDayAnimation(); return; }
+      stopDayAnimation();
+      activeDay = day;
+
+      const icon = document.querySelector(`.day-icon[data-day="${day}"]`);
+      if (icon) icon.classList.add('active');
+
+      if (day === 'valentine') {
+        ['rose', 'propose', 'chocolate', 'teddy', 'promise', 'hug', 'kiss'].forEach(t => spawnBatch(t, 5));
+      } else {
+        spawnBatch(day, 20);
+      }
+
+      animateDayParticles();
+
+      const duration = day === 'valentine' ? 10000 : 6000;
+      dayAnimTimeout = setTimeout(() => stopDayAnimation(), duration);
+    }
+
+    function pickEmoji(type) {
+      const list = dayEmojis[type];
+      return list[Math.floor(Math.random() * list.length)];
+    }
+
+    function createParticle(type) {
+      const W = dayAnimCanvas.width;
+      const H = dayAnimCanvas.height;
+      const p = {
+        type: type,
+        x: Math.random() * W,
+        y: -Math.random() * H * 0.3 - 30,
+        speedX: (Math.random() - 0.5) * 1.8,
+        speedY: 1.5 + Math.random() * 2,
+        rotation: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.06,
+        opacity: 0.8 + Math.random() * 0.2,
+        wobble: Math.random() * Math.PI * 2,
+        wobbleSpeed: 0.02 + Math.random() * 0.02,
+        cached: getEmojiCanvas(pickEmoji(type)),
+        alive: true
+      };
+
+      // Type-specific motion
+      if (type === 'propose') {
+        p.speedY *= 0.7;
+      } else if (type === 'teddy') {
+        p.speedY *= 0.6;
+        p.bounceY = H * (0.6 + Math.random() * 0.3);
+        p.bouncing = false;
+      } else if (type === 'promise') {
+        p.x = W / 2 + (Math.random() - 0.5) * 100;
+        p.y = H / 2 + (Math.random() - 0.5) * 80;
+        const angle = Math.random() * Math.PI * 2;
+        p.speedX = Math.cos(angle) * (1.5 + Math.random() * 1.5);
+        p.speedY = Math.sin(angle) * (1.5 + Math.random() * 1.5);
+      } else if (type === 'hug') {
+        p.x = W / 2 + (Math.random() - 0.5) * 120;
+        p.y = H / 2 + (Math.random() - 0.5) * 120;
+        const angle = Math.random() * Math.PI * 2;
+        p.speedX = Math.cos(angle) * (1 + Math.random() * 1.2);
+        p.speedY = Math.sin(angle) * (1 + Math.random() * 1.2);
+      } else if (type === 'kiss') {
+        p.y = H + Math.random() * 60;
+        p.speedY = -(1.5 + Math.random() * 1.5);
+      }
+
+      return p;
+    }
+
+    function spawnBatch(type, count) {
+      for (let i = 0; i < count && particleCount < MAX_PARTICLES; i++) {
+        activeDayParticles.push(createParticle(type));
+        particleCount++;
+      }
+    }
+
+    // Spawn scheduling
+    let spawnCounter = 0;
+
+    function animateDayParticles() {
+      dayCtx.clearRect(0, 0, dayAnimCanvas.width, dayAnimCanvas.height);
+
+      // Spawn new particles at a gentle rate
+      spawnCounter++;
+      if (spawnCounter % 20 === 0 && activeDay && particleCount < MAX_PARTICLES) {
+        if (activeDay === 'valentine') {
+          const types = ['rose', 'propose', 'chocolate', 'teddy', 'promise', 'hug', 'kiss'];
+          spawnBatch(types[Math.floor(Math.random() * types.length)], 1);
+        } else {
+          spawnBatch(activeDay, 2);
+        }
+      }
+
+      // Update & render — iterate backwards for swap-and-pop removal
+      let len = activeDayParticles.length;
+      const cw = dayAnimCanvas.width;
+      const ch = dayAnimCanvas.height;
+
+      for (let i = len - 1; i >= 0; i--) {
+        const p = activeDayParticles[i];
+
+        // Physics update
+        p.wobble += p.wobbleSpeed;
+        p.x += p.speedX + Math.sin(p.wobble) * 0.6;
+        p.y += p.speedY;
+        p.rotation += p.rotSpeed;
+        p.opacity -= 0.003;
+
+        // Teddy bounce
+        if (p.type === 'teddy' && !p.bouncing && p.y >= p.bounceY) {
+          p.speedY = -p.speedY * 0.5;
+          p.bouncing = true;
+        }
+        if (p.type === 'teddy' && p.bouncing) {
+          p.speedY += 0.1;
+        }
+
+        // Remove check — swap-and-pop (O(1) instead of splice O(n))
+        if (p.opacity <= 0 || p.y > ch + 60 || p.y < -150 || p.x < -60 || p.x > cw + 60) {
+          activeDayParticles[i] = activeDayParticles[len - 1];
+          activeDayParticles.pop();
+          len--;
+          particleCount--;
+          continue;
+        }
+
+        // Draw cached emoji image (fast!)
+        dayCtx.save();
+        dayCtx.globalAlpha = p.opacity;
+        dayCtx.translate(p.x, p.y);
+        dayCtx.rotate(p.rotation);
+        const halfSize = (EMOJI_SIZE + 8) / 2;
+        dayCtx.drawImage(p.cached, -halfSize, -halfSize);
+        dayCtx.restore();
+      }
+
+      dayAnimId = requestAnimationFrame(animateDayParticles);
+    }
   </script>
 
 </body>
+
 </html>
